@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
  * @author gfaraujo
@@ -19,7 +20,7 @@ public class SimpleCalculateCashBackTest {
     @Test
     public void mustReturnTheCorrectCashBack() {
         var bottlesQuantity = 2;
-        var expected = new BigDecimal(0.32).multiply(BigDecimal.valueOf(bottlesQuantity));
+        var expected = new BigDecimal(0.32).multiply(BigDecimal.valueOf(bottlesQuantity)).setScale(2, RoundingMode.HALF_EVEN);
 
         var  cashBackValue = cacheBackCalculatorService.calculateCachback(calculateCashBack, 2);
 
