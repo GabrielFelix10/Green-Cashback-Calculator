@@ -31,7 +31,7 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 // remove o mapeamento dos endpoints do SpringBoot
-                .apis(RequestHandlerSelectors.basePackage("br.com.apolo.resource"))
+                .apis(RequestHandlerSelectors.basePackage("com.green.cashback.greenCashbackCalculator.resource"))
                 .paths(PathSelectors.any())
                 .build()
                 .directModelSubstitute(LocalDate.class, String.class)
@@ -50,22 +50,22 @@ public class SwaggerConfig {
 
         responseMessages.add(new ResponseMessageBuilder()
                 .code(HttpStatus.NO_CONTENT.value())
-                .message("Nenhum valor encontrado.")
+                .message("No value Found")
                 .build());
 
         responseMessages.add(new ResponseMessageBuilder()
                 .code(HttpStatus.BAD_REQUEST.value())
-                .message("Requisição realizada indevidamente.")
+                .message("Wrong request")
                 .build());
 
         responseMessages.add(new ResponseMessageBuilder()
                 .code(HttpStatus.BAD_GATEWAY.value())
-                .message("Serviços dependentes com erro.")
+                .message("Dependencies with error")
                 .build());
 
         responseMessages.add(new ResponseMessageBuilder()
                 .code(HttpStatus.INTERNAL_SERVER_ERROR.value())
-                .message("Erro interno.")
+                .message("Internal Error")
                 .build());
 
         return responseMessages;
@@ -74,9 +74,9 @@ public class SwaggerConfig {
     private ApiInfo getApiInfo () {
 
         return new ApiInfoBuilder()
-                .title("API que buscar o extrato pagbank de um usuário. ")
-                .description("API que interage com os serviços de customer e do Topaz, para buscar o extrato de um cliente.")
-                .contact(new Contact("PS Curitiba", "", "l-dev-pagseguro-curitiba@uolinc.com"))
+                .title("Green Cashback")
+                .description("Api that returns a cashback according to the amount of plastic bottles")
+                .contact(new Contact("Gabriel Felix", "", "gafelix10@gmail.com"))
                 .build();
     }
 }

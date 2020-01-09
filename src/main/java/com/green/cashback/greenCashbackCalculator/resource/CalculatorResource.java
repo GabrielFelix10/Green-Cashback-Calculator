@@ -4,6 +4,7 @@ import com.green.cashback.greenCashbackCalculator.model.Bottle;
 import com.green.cashback.greenCashbackCalculator.service.SimpleCalculateCashBack;
 import com.green.cashback.greenCashbackCalculator.model.response.CashBackCalculatedDTO;
 import com.green.cashback.greenCashbackCalculator.service.CacheBackCalculatorService;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,6 +25,7 @@ public class CalculatorResource {
     @Autowired
     private SimpleCalculateCashBack simpleCalculateCashBack;
 
+    @ApiOperation(value = "Calculate the cashback value", response = CashBackCalculatedDTO.class)
     @PostMapping("/cash-back")
     public ResponseEntity<CashBackCalculatedDTO> calculateCashBack(@Valid @RequestBody final Bottle bottle){
 
