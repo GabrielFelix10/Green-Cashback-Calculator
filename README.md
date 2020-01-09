@@ -12,7 +12,17 @@ This project return a cash back value given a quantity of recycle bottles
 And be happy :)
 <br />
 
-**## Or Run the docker image**
+**## Or Run the docker image **
+<br />
+
+**## This project was build using some technologies, listed below**
+
+* Java 11
+* Kubernetes 
+* Docker
+* Cucumber for tests
+* Spring test for TDD
+
 
 
 
