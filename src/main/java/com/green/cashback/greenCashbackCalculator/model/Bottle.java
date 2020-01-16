@@ -5,7 +5,8 @@ import javax.validation.constraints.Min;
 /**
  * @author gfaraujo
  */
-public class Bottle {
+public class
+Bottle {
 
     private Bottle() {
 

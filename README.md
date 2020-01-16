@@ -6,7 +6,9 @@ This project return a cash back value given a quantity of recycle bottles
 ## Starting local application in your machine
 
 ### Step 1   
+```sh
 ./gradlew bootRun
+```
 <br />
 ### Step 2
 2 - localhost:9095/swagger-ui.html
