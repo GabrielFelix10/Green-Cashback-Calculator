@@ -74,7 +74,7 @@ public class SwaggerConfig {
     private ApiInfo getApiInfo () {
 
         return new ApiInfoBuilder()
-                .title("Green Cashback")
+                .title("Green Cashback Calculator")
                 .description("Api that returns a cashback according to the amount of plastic bottles")
                 .contact(new Contact("Gabriel Felix", "", "gafelix10@gmail.com"))
                 .build();
