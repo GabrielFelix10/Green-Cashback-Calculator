@@ -7,10 +7,6 @@ import java.math.BigDecimal;
  */
 public class CashBackCalculatedDTO {
 
-    private CashBackCalculatedDTO() {
-
-    }
-
     public CashBackCalculatedDTO(final BigDecimal cashBackValue) {
         this.cashBackValue = cashBackValue;
     }

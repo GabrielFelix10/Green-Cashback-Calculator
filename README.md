@@ -7,7 +7,7 @@ This project return a cash back value given a quantity of recycle bottles
 
 ### Step 1   
 ```sh
-./gradlew bootRun
+ docker run -p 9095:9095 gafelix10/green-cashback-calculator
 ```
 <br />
 ### Step 2
