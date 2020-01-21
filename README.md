@@ -7,11 +7,14 @@ This project return a cash back value given a quantity of recycle bottles
 
 ### Step 1   
 ```sh
- docker run -p 9095:9095 gafelix10/green-cashback-calculator
+ docker run -p 9095:9095 gafelix10/green-cashback-calculator:v1
 ```
-<br />
-### Step 2
-2 - localhost:9095/swagger-ui.html
+
+### Step 2   
+
+```sh
+  localhost:9095/swagger-ui.html
+```
 
 And be happy :)
 <br />
